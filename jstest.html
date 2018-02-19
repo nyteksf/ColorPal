@@ -1855,7 +1855,7 @@ $(document).ready(function() {
     
     console.log(usedColorStack);
     $curColor = $("#inputColor").attr("curColor");
-    console.log($curColor);
+    console.log(usedColorStack.includes($curColor));
     
     /* PREVENT SAVING THE SAME COLOR TWICE OR MORE IN A ROW */  
     //var lastColorUsed = usedColorStack.pop();
