@@ -1853,6 +1853,10 @@ $(document).ready(function() {
     $("body").css("color", "lightgray");
     var colorSearchResult = "";
     
+    console.log(usedColorStack);
+    console.log($("#inputColor").val().toLowerCase());
+    console.log(usedColorStack.includes($("#inputColor").val().toLowerCase()));
+    
     /* PREVENT SAVING THE SAME COLOR TWICE OR MORE IN A ROW */  
     //var lastColorUsed = usedColorStack.pop();
     if (usedColorStack.length > 0) {
