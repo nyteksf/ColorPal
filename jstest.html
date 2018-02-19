@@ -1854,9 +1854,8 @@ $(document).ready(function() {
     var colorSearchResult = "";
     
     console.log(usedColorStack);
-    console.log(usedColorStack.includes($("#inputColor").attr("curColor").slice(1)));
-    console.log("curcolor -> ", $("#inputColor").attr("curColor").slice(1)); 
-    //let $curColor = $("#inputColor").attr("curColor").slice(1);
+    $curColor = $("#inputColor").attr("curColor");
+    console.log($curColor);
     
     /* PREVENT SAVING THE SAME COLOR TWICE OR MORE IN A ROW */  
     //var lastColorUsed = usedColorStack.pop();
