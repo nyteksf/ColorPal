@@ -1856,7 +1856,7 @@ $(document).ready(function() {
     console.log(usedColorStack);
     console.log($("#inputColor").val().toLowerCase());
     console.log(usedColorStack.includes($("#inputColor").val().toLowerCase()));
-    console.log($("#inputColor").attr("curColor")); 
+    console.log("curcolor -> ", $("#inputColor").attr("curColor").slice(1).toLowerCase()); 
     let $curColor = $("#inputColor").attr("curColor");
     
     /* PREVENT SAVING THE SAME COLOR TWICE OR MORE IN A ROW */  
