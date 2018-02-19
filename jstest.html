@@ -1855,14 +1855,16 @@ $(document).ready(function() {
     console.log("curColor ", $curColor)    
 
     let thisColor = arraySearch(sourceColorArray, $curColor, "name")
-    console.log(thisColor);
+    console.log("thisColor ", thisColor);
+    
+    console.log(usedColorStack.includes(thisColor));
     
     /* PREVENT SAVING THE SAME COLOR TWICE OR MORE IN A ROW */  
     //var lastColorUsed = usedColorStack.pop();
     if (usedColorStack.length > 0) {
-        //if (usedColorStack.includes($curColor)) {
-        //    throw new Error("Repeat Color Entry Denied. Select another color please.");
-        //}
+        if (usedColorStack.includes($curColor)) {
+            throw new Error("Repeat Color Entry Denied. Select another color please.");
+        }
     };
       
     if ($("#inputColor").val().length === undefined || $("#inputColor").val() === "") {
