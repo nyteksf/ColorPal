@@ -1852,13 +1852,10 @@ $(document).ready(function() {
     $("body").css("color", "lightgray");
     var colorSearchResult = "";
     $curColor = $("#inputColor").val();
-    console.log("curColor ", $curColor)    
-
     let thisColor = arraySearch(sourceColorArray, $curColor, "name") ? arraySearch(sourceColorArray, $curColor, "name") : tinycolor($('#inputColor').val()).toHexString(); 
-    //if (!thisColor) thisColor = $("#colorInput").val();
     
     console.log("thisColor ", thisColor);
-    
+    console.log(usedColorStack);
     console.log(usedColorStack.includes(thisColor));
     
     /* PREVENT SAVING THE SAME COLOR TWICE OR MORE IN A ROW */  
