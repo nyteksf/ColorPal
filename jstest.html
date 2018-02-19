@@ -1856,6 +1856,8 @@ $(document).ready(function() {
     console.log(usedColorStack);
     console.log($("#inputColor").val().toLowerCase());
     console.log(usedColorStack.includes($("#inputColor").val().toLowerCase()));
+    console.log($("#inputColor").attr("curColor")); 
+    let $curColor = $("#inputColor").attr("curColor");
     
     /* PREVENT SAVING THE SAME COLOR TWICE OR MORE IN A ROW */  
     //var lastColorUsed = usedColorStack.pop();
@@ -1892,7 +1894,8 @@ $(document).ready(function() {
     } else {
       $("body").css("background-color", $userInputColor); /* Try Color As Is */
     }
-    $("#inputColor").attr("title", colorSearchResult + " | " + tinycolor(colorSearchResult).toHslString());    
+    $("#inputColor").attr("title", colorSearchResult + " | " + tinycolor(colorSearchResult).toHslString());
+    $("#inputColor").attr("curColor", colorSearchResult);
   });
 
   /* DO STUFF WITH SWATCHES ON CLICK */
