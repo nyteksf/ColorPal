@@ -1854,10 +1854,9 @@ $(document).ready(function() {
     var colorSearchResult = "";
     
     console.log(usedColorStack);
-    console.log($("#inputColor").val().toLowerCase());
-    console.log(usedColorStack.includes($("#inputColor").val().toLowerCase()));
-    //console.log("curcolor -> ", $("#inputColor").attr("curColor").slice(1).toLowerCase()); 
-    //let $curColor = $("#inputColor").attr("curColor");
+    console.log(usedColorStack.includes($("#inputColor").attr("curColor").slice(1)));
+    console.log("curcolor -> ", $("#inputColor").attr("curColor").slice(1)); 
+    //let $curColor = $("#inputColor").attr("curColor").slice(1);
     
     /* PREVENT SAVING THE SAME COLOR TWICE OR MORE IN A ROW */  
     //var lastColorUsed = usedColorStack.pop();
