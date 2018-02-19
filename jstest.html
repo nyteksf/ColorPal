@@ -1849,18 +1849,14 @@ $(document).ready(function() {
     if (curColorToHex === "#000000") {
       curColorToHex = arraySearch(sourceColorArray, $("#inputColor").val());
     }
-    
     $("body").css("color", "lightgray");
     var colorSearchResult = "";
-    
-    console.log(usedColorStack);
     $curColor = $("#inputColor").attr("curColor");
-    console.log(usedColorStack.includes($curColor));
     
     /* PREVENT SAVING THE SAME COLOR TWICE OR MORE IN A ROW */  
     //var lastColorUsed = usedColorStack.pop();
     if (usedColorStack.length > 0) {
-        if (usedColorStack.includes($("#inputColor").val().toLowerCase())) {
+        if (usedColorStack.includes($curColor)) {
             throw new Error("Repeat Color Entry Denied. Select another color please.");
         }
     };
