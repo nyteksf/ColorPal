@@ -1862,7 +1862,7 @@ $(document).ready(function() {
     /* PREVENT SAVING THE SAME COLOR TWICE OR MORE IN A ROW */  
     //var lastColorUsed = usedColorStack.pop();
     if (usedColorStack.length > 0) {
-        if (usedColorStack.includes($curColor)) {
+        if (usedColorStack.includes(thisColor)) {
             throw new Error("Repeat Color Entry Denied. Select another color please.");
         }
     };
