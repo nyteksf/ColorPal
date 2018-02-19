@@ -1852,11 +1852,7 @@ $(document).ready(function() {
     $("body").css("color", "lightgray");
     var colorSearchResult = "";
     $curColor = $("#inputColor").val();
-    let thisColor = arraySearch(sourceColorArray, $curColor, "name") ? arraySearch(sourceColorArray, $curColor, "name") : tinycolor($('#inputColor').val()).toHexString(); 
-    
-    console.log("thisColor ", thisColor);
-    console.log(usedColorStack);
-    console.log(usedColorStack.includes(thisColor));
+    let thisColor = arraySearch(sourceColorArray, $curColor, "name") ? arraySearch(sourceColorArray, $curColor, "name") : tinycolor($('#inputColor').val()).toHexString();
     
     /* PREVENT SAVING THE SAME COLOR TWICE OR MORE IN A ROW */  
     //var lastColorUsed = usedColorStack.pop();
